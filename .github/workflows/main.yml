@@ -1,57 +1,32 @@
-name: Daily README Update
+name: Update README Daily
 
 on:
+  push:
+    branches: 'main'
   schedule:
     - cron: "0 */6 * * *"
-  push:
-    branches:
-      - main
   workflow_dispatch:
-    inputs:
-      bar_style:
-        description: 'Progress bar style (block | shade | ascii | dot | arrow | pipe)'
-        required: false
-        default: 'block'
-        type: choice
-        options:
-          - block
-          - shade
-          - ascii
-          - dot
-          - pipe
-          - emoji
 
 permissions:
   contents: write
 
 jobs:
-  update-readme:
+  update:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          ref: main
+      - uses: actions/checkout@v4
 
-      - name: Update README stats
-        id: update_stats
-        uses: pphatdev/daily-waka-action@v1
-        # uses: ./
+      - name: Run Waka README Action
+        id: daily
+        uses: pphatdev/pphatdev@v1.0.4
         with:
           waka-token: ${{ secrets.WAKA_KEY }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          bar-style: ${{ github.event.inputs.bar_style || vars.BAR_STYLE || 'block' }}
+          bar-style: block
 
-      - name: Commit and push changes
-        if: steps.update_stats.outputs.changed == 'true'
+      - name: Commit generated files
+        if: steps.daily.outputs.changed == 'true'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore(readme): update daily coding stats"
           file_pattern: "README.md data/coding_stats.json"
-          branch: main
-
-
-
-
-
