@@ -4,3 +4,23 @@ Hello I'm Sokkean
 ![](http://stats.pphat.top/graph?username=Sokkean&theme=ocean&size=default&show_background=true&animate=glow)
 
 ![icon-html](https://stats.pphat.top/assets/icons/html.svg)
+
+
+<!--START_SECTION:daily-->
+```diff
+████████░░░░░░░░░░░░░░░░░ ⁝ 33.27% • JavaScript
+█████░░░░░░░░░░░░░░░░░░░░ ⁝ 19.61% • TypeScript
+████░░░░░░░░░░░░░░░░░░░░░ ⁝ 16.97% • Markdown
+████░░░░░░░░░░░░░░░░░░░░░ ⁝ 14.76% • Image (svg)
+██░░░░░░░░░░░░░░░░░░░░░░░ ⁝ 8.88% • Blade Template
+█░░░░░░░░░░░░░░░░░░░░░░░░ ⁝ 3.36% • Other
+░░░░░░░░░░░░░░░░░░░░░░░░░ ⁝ 1.94% • PHP
+░░░░░░░░░░░░░░░░░░░░░░░░░ ⁝ 0.62% • CSS
+░░░░░░░░░░░░░░░░░░░░░░░░░ ⁝ 0.27% • MDX
+░░░░░░░░░░░░░░░░░░░░░░░░░ ⁝ 0.19% • XML
+░░░░░░░░░░░░░░░░░░░░░░░░░ ⁝ 0.07% • JSON
+░░░░░░░░░░░░░░░░░░░░░░░░░ ⁝ 0.04% • Python
+░░░░░░░░░░░░░░░░░░░░░░░░░ ⁝ 0.01% • Git
+░░░░░░░░░░░░░░░░░░░░░░░░░ ⁝ 0.0% • YAML
+```
+<!--END_SECTION:daily-->
